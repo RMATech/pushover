@@ -19,6 +19,7 @@ defmodule Pushover.Model.Message do
   use GoogleApi.Gax.ModelBase
 
   @type t :: %__MODULE__{
+    :user => String.t(),
     :data => String.t(),
     :device => String.t(),
     :title => String.t(),
@@ -31,6 +32,7 @@ defmodule Pushover.Model.Message do
     :timestamp => integer(),
   }
 
+  field(:user)
   field(:data)
   field(:device)
   field(:title)

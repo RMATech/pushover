@@ -43,7 +43,7 @@ defmodule Pushover.Api.Messages do
       |> Request.method(:post)
       |> Request.url("/messages.json")
       |> Request.add_param(:query, :token, Pushover.get_token())
-      |> Request.add_param(:query, :user, Pushover.get_user())
+      |> Request.add_param(:query, :user, message.user || Pushover.get_user())
       |> Request.add_param(:body, :message, message.data)
       |> Request.add_optional_params(optional_params_config, optional_params)
 
