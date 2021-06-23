@@ -42,7 +42,7 @@ defmodule Pushover.MixProject do
       {:google_gax, "~> 0.3.1"},
 
       # Docs
-      {:ex_doc, "~> 0.21.3", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.24.2", only: :dev, runtime: false}
     ]
   end
 end
